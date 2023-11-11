@@ -1,0 +1,19 @@
+.text {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.text_larger {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.text_large {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.text_bold {
+  font-weight: bold;
+}
