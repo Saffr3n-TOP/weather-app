@@ -1,0 +1,12 @@
+@import url('./separator');
+
+.content {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #888;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px 0 #888;
+  background: #ccf;
+}
