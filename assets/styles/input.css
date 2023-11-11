@@ -1,0 +1,16 @@
+.input {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #888;
+  border-radius: 16px;
+  outline: 1px solid transparent;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.input:hover {
+  border-color: #666;
+}
+
+.input:focus {
+  outline-color: blue;
+}
