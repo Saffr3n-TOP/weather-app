@@ -9,7 +9,7 @@ export default function normalizeWeatherData(data: WeatherData) {
     },
     current: {
       condition: {
-        icon: `http:${data.current.condition.icon}`,
+        icon: `https:${data.current.condition.icon}`,
         description: data.current.condition.text
       },
       temperature: {
