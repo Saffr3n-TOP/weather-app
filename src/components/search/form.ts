@@ -3,6 +3,7 @@ import getWeatherData from '../../utils/getWeatherData';
 import normalizeWeatherData from '../../utils/normalizeWeatherData';
 import input from './input';
 import button from './button';
+import updateWeatherInfo from '../../utils/updateWeatherInfo';
 
 const form = document.createElement('form');
 
@@ -28,7 +29,25 @@ form.onsubmit = async (e) => {
   }
 
   const normalizedData = normalizeWeatherData(weatherData);
-  console.log(normalizedData);
+  const {
+    updateLocation,
+    updateCondition,
+    updateImage,
+    updateActualTemp,
+    updateFeelTemp
+  } = updateWeatherInfo;
+
+  updateLocation(normalizedData.location.country, normalizedData.location.city);
+  updateCondition(normalizedData.current.condition.description);
+  updateImage(normalizedData.current.condition.icon);
+  updateActualTemp(
+    normalizedData.current.temperature.actualC,
+    normalizedData.current.temperature.actualF
+  );
+  updateFeelTemp(
+    normalizedData.current.temperature.feelsLikeC,
+    normalizedData.current.temperature.feelsLikeF
+  );
 };
 
 export default form;
